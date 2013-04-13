@@ -22,7 +22,12 @@ nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " tagbar
-let g:tagbar_ctags_bin='/usr/bin/ctags'
+if has('win32')
+    let g:tagbar_ctags_bin='$VIMRUNTIME/ctags.exe'
+else
+    let g:tagbar_ctags_bin='/usr/bin/ctags'
+endif
+
 "let g:tagbar_right = 1
 
 " // The switch of the Source Explorer 
@@ -67,7 +72,12 @@ let g:SrcExpl_updateTagsKey = "<F12>"
 " TagList
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
+if has('win32')
+    let Tlist_Ctags_Cmd='$VIMRUNTIME/ctags.exe'
+else
+    let Tlist_Ctags_Cmd='/usr/bin/ctags'
+endif
+
 
 " winmanager
 

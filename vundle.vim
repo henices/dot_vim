@@ -4,10 +4,15 @@ filetype off
 
 
 " vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+if has('win32')
+    set rtp+=$VIM/vimfiles/bundle/vundle/
+    call vundle#rc('$VIM/vimfiles/bundle/vundle/')
+else
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+endif
 
+Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomasr/molokai'
