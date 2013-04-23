@@ -25,11 +25,6 @@ autocmd BufReadPost *.nasl set filetype=nasl
 
 set formatoptions=ctqmM
 
-" some windows shortcut support, such as ctrc a, ctrl c ...
-if has('win32')
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif
  
 " search settings
 set nohlsearch
@@ -56,8 +51,22 @@ set fileencodings=utf-8,cp936
 " avoid \r\n  windows format
 set ff=unix
 
-set guifont=文泉驿等宽微米黑\ 11
-set guifontwide=文泉驿等宽微米黑\ 11
+if ! has('win32')
+    set guifont=文泉驿等宽微米黑\ 11
+    set guifontwide=文泉驿等宽微米黑\ 11
+else
+    set guifont=consola:h11
+endif
+
+" some windows shortcut support, such as ctrc a, ctrl c ...
+" encoding
+if has('win32')
+    source $VIMRUNTIME/mswin.vim
+    "behave mswin
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    language messages zh_CN.utf-8
+endif
 
 set clipboard=unnamed " use os clipboard, Not need "+
 
