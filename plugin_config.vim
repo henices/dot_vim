@@ -122,6 +122,9 @@ let g:pymode_rope_auto_project = 1
 " Enable autoimport
 let g:pymode_rope_enable_autoimport = 1
 
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
 " Auto generate global cache
 let g:pymode_rope_autoimport_generate = 1
 let g:pymode_rope_autoimport_underlineds = 0
