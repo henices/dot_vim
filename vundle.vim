@@ -6,7 +6,7 @@ filetype off
 " vundle
 if has('win32')
     set rtp+=$VIM/vimfiles/bundle/vundle/
-    call vundle#rc('$VIM/vimfiles/bundle/vundle/')
+    call vundle#rc('$VIM/vimfiles/bundle/')
 else
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
