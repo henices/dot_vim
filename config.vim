@@ -18,10 +18,7 @@ set scrolloff=3
 set title
 set list
 
-" filetype and format
 filetype plugin indent on
-autocmd BufReadPost *.nasl set filetype=nasl
-
 
 set formatoptions=ctqmM
 

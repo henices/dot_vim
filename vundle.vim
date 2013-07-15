@@ -12,6 +12,8 @@ else
     call vundle#rc()
 endif
 
+filetype plugin indent on
+
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
@@ -21,6 +23,7 @@ Bundle 'wesleyche/SrcExpl'
 Bundle 'klen/python-mode'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'vim-scripts/Conque-Shell'
 "Bundle 'scrooloose/nerdtree'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
@@ -32,6 +35,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'VimOrganizer'
 Bundle 'utl.vim'
 Bundle 'NrrwRgn'
+Bundle 'Figlet.vim'
+Bundle 'mileszs/ack.vim'
 
 " color scheme
 Bundle 'peaksea'

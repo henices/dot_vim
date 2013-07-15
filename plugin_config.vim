@@ -125,6 +125,7 @@ let g:vim_markdown_folding_disabled=1
 "
 " Load rope plugin
 let g:pymode_rope = 1
+
 "
 "  Auto create and open ropeproject
 let g:pymode_rope_auto_project = 1
@@ -148,7 +149,7 @@ let g:pymode_rope_local_prefix = "<C-c>r"
 let g:pymode_rope_vim_completion = 1
 let g:pymode_rope_guess_project = 1
 let g:pymode_rope_goto_def_newwin = ""
-let g:pymode_rope_always_show_complete_menu = 0
+let g:pymode_rope_always_show_complete_menu = 1
 
 " Enable python folding
 let g:pymode_folding = 0
