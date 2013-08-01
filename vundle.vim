@@ -23,7 +23,7 @@ Bundle 'wesleyche/SrcExpl'
 Bundle 'klen/python-mode'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'vim-scripts/Conque-Shell'
+"Bundle 'vim-scripts/Conque-Shell'
 "Bundle 'scrooloose/nerdtree'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
@@ -37,6 +37,7 @@ Bundle 'utl.vim'
 Bundle 'NrrwRgn'
 Bundle 'Figlet.vim'
 Bundle 'mileszs/ack.vim'
+Bundle "pangloss/vim-javascript"
 
 " color scheme
 Bundle 'peaksea'

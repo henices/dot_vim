@@ -23,7 +23,6 @@ filetype plugin indent on
 
 set formatoptions=ctqmM
 
- 
 " search settings
 set nohlsearch
 set incsearch
@@ -34,6 +33,7 @@ set matchtime=2
 " case settings
 set ignorecase
 set smartcase
+set infercase
 
 " Allow folding to play nice with Python and other well-indented code
 "set foldmethod=indent
