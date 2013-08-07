@@ -29,7 +29,7 @@ Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'fcitx.vim'
 Bundle 'DoxygenToolkit.vim'
-Bundle 'AutoComplPop'
+"Bundle 'AutoComplPop'
 Bundle 'csharp.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'VimOrganizer'
@@ -38,6 +38,8 @@ Bundle 'NrrwRgn'
 Bundle 'Figlet.vim'
 Bundle 'mileszs/ack.vim'
 Bundle "pangloss/vim-javascript"
+Bundle "scrooloose/syntastic"
+Bundle "davidhalter/jedi-vim"
 
 " color scheme
 Bundle 'peaksea'

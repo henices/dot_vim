@@ -1,11 +1,10 @@
 " windows control
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
-
-nmap <C-E> :e#<CR>
-
 map <C-H> <C-W>h
 map <C-L> <C-W>l
+
+nmap <C-E> :e#<CR>
 
 " tab control
 nmap <F11> :tabp<CR>
