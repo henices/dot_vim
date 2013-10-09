@@ -22,14 +22,10 @@ Bundle 'wesleyche/Trinity'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'klen/python-mode'
 Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/bufexplorer.zip'
-"Bundle 'vim-scripts/Conque-Shell'
-"Bundle 'scrooloose/nerdtree'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'fcitx.vim'
 Bundle 'DoxygenToolkit.vim'
-"Bundle 'AutoComplPop'
 Bundle 'csharp.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'VimOrganizer'
@@ -40,6 +36,7 @@ Bundle 'mileszs/ack.vim'
 Bundle "pangloss/vim-javascript"
 Bundle "scrooloose/syntastic"
 Bundle "davidhalter/jedi-vim"
+Bundle "Valloric/YouCompleteMe"
 
 " color scheme
 Bundle 'peaksea'

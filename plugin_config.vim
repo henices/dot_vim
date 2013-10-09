@@ -40,7 +40,7 @@ let g:SrcExpl_winHeight = 8
 let g:SrcExpl_refreshTime = 100 
 
 " // Set "Enter" key to jump into the exact definition context 
-" let g:SrcExpl_jumpKey = "<ENTER>" 
+let g:SrcExpl_jumpKey = "<ENTER>" 
 
 " // Set "Space" key for back from the definition context 
 let g:SrcExpl_gobackKey = "<SPACE>" 
@@ -83,15 +83,6 @@ endif
 
 "let g:winManagerWindowLayout='FileExplorer|TagList'
 "nmap wm :WMToggle<cr>
-
-" use python to do caculate, need vim compiled with python support
-if has("python")
-    :command! -nargs=+ Calc :py print <args>
-    :py from math import *
-    " with python command support
-    " command! -nargs=+ Calc :!python -c "from math import *; print <args>"
-endif
-
 
 " Powerline
 set laststatus=2
@@ -140,13 +131,13 @@ let g:pymode_lint_write = 0
 let g:pymode_rope_autoimport_generate = 1
 let g:pymode_rope_autoimport_underlineds = 0
 let g:pymode_rope_codeassist_maxfixes = 10
-let g:pymode_rope_sorted_completions = 1
-let g:pymode_rope_extended_complete = 1
+let g:pymode_rope_sorted_completions = 0
+let g:pymode_rope_extended_complete = 0
 let g:pymode_rope_autoimport_modules = ["os","shutil","datetime"]
 let g:pymode_rope_confirm_saving = 1
 let g:pymode_rope_global_prefix = "<C-x>p"
 let g:pymode_rope_local_prefix = "<C-c>r"
-let g:pymode_rope_vim_completion = 1
+let g:pymode_rope_vim_completion = 0
 let g:pymode_rope_guess_project = 1
 let g:pymode_rope_goto_def_newwin = ""
 let g:pymode_rope_always_show_complete_menu = 1
@@ -158,4 +149,8 @@ let g:pymode_folding = 0
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 

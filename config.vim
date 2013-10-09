@@ -66,7 +66,11 @@ if has('win32')
     language messages zh_CN.utf-8
 endif
 
-set clipboard=unnamed " use os clipboard, Not need "+
+if has('win32')
+    set clipboard=unnamed " use os clipboard, Not need "+
+else
+    set clipboard=unnamedplus
+endif
 
 "set mouse=a
 
@@ -102,4 +106,5 @@ syntax on
 set foldenable
 set showmatch
 
-
+" ignore some file
+set wildignore+=*.swp,*.so,*.exe
