@@ -19,8 +19,6 @@ set scrolloff=3
 set title
 set list
 
-filetype plugin indent on
-
 set formatoptions=ctqmM
 
 " search settings
@@ -49,11 +47,12 @@ set fileencodings=utf-8,cp936
 " avoid \r\n  windows format
 set ff=unix
 
-if ! has('win32')
-    set guifont=文泉驿等宽微米黑\ 11
-    set guifontwide=文泉驿等宽微米黑\ 11
+if has('win32') || has('win64')
+    set guifont=consolas:h10:cANSI
 else
-    set guifont=consola:h11
+    "set guifont=Source\ Code\ Pro\ 12
+    set guifont=Monaco\ 12
+    "set guifont=Ubuntu\ Mono\ 12
 endif
 
 " some windows shortcut support, such as ctrc a, ctrl c ...
@@ -67,7 +66,7 @@ if has('win32')
 endif
 
 if has('win32')
-    set clipboard=unnamed " use os clipboard, Not need "+
+    set clipboard=unnamed
 else
     set clipboard=unnamedplus
 endif
@@ -108,3 +107,4 @@ set showmatch
 
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
+

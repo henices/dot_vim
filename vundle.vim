@@ -28,7 +28,6 @@ Bundle 'fcitx.vim'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'csharp.vim'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'VimOrganizer'
 Bundle 'utl.vim'
 Bundle 'NrrwRgn'
 Bundle 'Figlet.vim'
@@ -38,7 +37,11 @@ Bundle "scrooloose/syntastic"
 Bundle "davidhalter/jedi-vim"
 Bundle "Valloric/YouCompleteMe"
 
-" color scheme
+"vimshell
+Bundle "Shougo/vimshell.vim"
+Bundle "Shougo/vimproc.vim"
+
+"color scheme
 Bundle 'peaksea'
 Bundle 'desert256.vim'
 Bundle 'vim-scripts/tir_black'
@@ -48,3 +51,8 @@ Bundle 'vim-scripts/tango.vim'
 
 " syntax
 Bundle 'vim-scripts/nasl.vim'
+
+" org
+Bundle "jceb/vim-orgmode"
+Bundle "tpope/vim-speeddating"
+
