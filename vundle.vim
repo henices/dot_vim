@@ -12,7 +12,6 @@ else
     call vundle#rc()
 endif
 
-filetype plugin indent on
 
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
@@ -29,7 +28,7 @@ Bundle 'DoxygenToolkit.vim'
 Bundle 'csharp.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'utl.vim'
-Bundle 'NrrwRgn'
+Bundle 'chrisbra/NrrwRgn'
 Bundle 'Figlet.vim'
 Bundle 'mileszs/ack.vim'
 Bundle "pangloss/vim-javascript"
@@ -40,6 +39,7 @@ Bundle "Valloric/YouCompleteMe"
 "vimshell
 Bundle "Shougo/vimshell.vim"
 Bundle "Shougo/vimproc.vim"
+Bundle "Shougo/unite.vim"
 
 "color scheme
 Bundle 'peaksea'
@@ -53,6 +53,10 @@ Bundle 'vim-scripts/tango.vim'
 Bundle 'vim-scripts/nasl.vim'
 
 " org
-Bundle "jceb/vim-orgmode"
-Bundle "tpope/vim-speeddating"
+Bundle 'jceb/vim-orgmode'
+"Bundle 'hsitz/VimOrganizer'
+Bundle 'hughbien/org-vim'
+Bundle 'tpope/vim-speeddating'
+Bundle 'mattn/calendar-vim'
 
+filetype plugin indent on

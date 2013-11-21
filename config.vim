@@ -3,7 +3,7 @@
 " auto read when file modified
 set autoread
 " no button, cool
-set go=
+"set go=
 "set shortmess=atl
 set showcmd
 set noerrorbells
