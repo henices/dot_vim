@@ -150,7 +150,6 @@ map <leader>b :DoxBlock<cr>
 
 
 " vim-markdown
-let g:vim_markdown_folding_disabled=0
 let g:vim_markdown_initial_foldlevel=1
 
 " python-mode

@@ -3,7 +3,7 @@
 " auto read when file modified
 set autoread
 " no button, cool
-"set go=
+set go=
 "set shortmess=atl
 set showcmd
 set noerrorbells
@@ -22,7 +22,7 @@ set list
 set formatoptions=ctqmM
 
 " search settings
-set nohlsearch
+set hlsearch
 set incsearch
 
 set showmatch
@@ -51,7 +51,7 @@ if has('win32') || has('win64')
     set guifont=consolas:h10:cANSI
 else
     "set guifont=Source\ Code\ Pro\ 12
-    set guifont=Monaco\ 12
+    set guifont=Monaco\ 13
     "set guifont=Ubuntu\ Mono\ 12
 endif
 
@@ -94,7 +94,7 @@ set background=dark
 "colors peaksea
 "colors ps_color
 "colors af
-colors desert256
+colors desert-warm-256
 "colors molokai
 
 

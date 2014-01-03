@@ -19,4 +19,3 @@ let maplocalleader = ","
 nmap <Leader>bp :bp<CR>
 nmap <Leader>bn :bn<CR>
 
-
