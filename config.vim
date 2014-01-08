@@ -49,10 +49,16 @@ set ff=unix
 
 if has('win32') || has('win64')
     set guifont=consolas:h10:cANSI
-else
-    "set guifont=Source\ Code\ Pro\ 12
-    set guifont=Monaco\ 13
-    "set guifont=Ubuntu\ Mono\ 12
+endif
+
+if has('unix')
+    if system('uname') =~ 'Darwin'
+        set guifont=Menlo:h14
+    else
+        "set guifont=Source\ Code\ Pro\ 12
+        set guifont=Monaco\ 13
+        "set guifont=Ubuntu\ Mono\ 12
+    endif
 endif
 
 " some windows shortcut support, such as ctrc a, ctrl c ...
