@@ -31,7 +31,11 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'Figlet.vim'
 Bundle "scrooloose/syntastic"
 Bundle "davidhalter/jedi-vim"
+
+if v:version > 703 || (v:version == 703 && has('patch584'))
 Bundle "Valloric/YouCompleteMe"
+endif
+
 Bundle "maksimr/vim-jsbeautify"
 "}}}
 
