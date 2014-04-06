@@ -24,7 +24,9 @@ Bundle 'wesleyche/SrcExpl'
 Bundle 'klen/python-mode'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
-Bundle 'fcitx.vim'
+if has('unix') && system('uname') !~ "Darwin"
+    Bundle 'fcitx.vim'
+endif
 Bundle 'DoxygenToolkit.vim'
 Bundle 'utl.vim'
 Bundle 'chrisbra/NrrwRgn'
@@ -34,7 +36,7 @@ Bundle "davidhalter/jedi-vim"
 Bundle "jnwhiteh/vim-golang"
 
 if v:version > 703 || (v:version == 703 && has('patch584'))
-Bundle "Valloric/YouCompleteMe"
+    Bundle "Valloric/YouCompleteMe"
 endif
 
 Bundle "maksimr/vim-jsbeautify"
