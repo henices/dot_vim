@@ -77,6 +77,7 @@ Bundle 'csharp.vim'
 Bundle "pangloss/vim-javascript"
 Bundle 'plasticboy/vim-markdown'
 Bundle 'henices/vim-nbin'
+Bundle 'leshill/vim-json'
 "}}}
 
 " orgmode {{{
@@ -85,6 +86,7 @@ Bundle 'jceb/vim-orgmode'
 Bundle 'hughbien/org-vim'
 Bundle 'tpope/vim-speeddating'
 Bundle 'mattn/calendar-vim'
+Bundle 'dhruvasagar/vim-table-mode'
 " }}}
 
 filetype plugin indent on
