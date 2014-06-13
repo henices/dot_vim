@@ -43,7 +43,7 @@ Bundle "vim-scripts/vcscommand.vim"
 "}}}
 
 " utils {{{
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 "}}}
 
