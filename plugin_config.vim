@@ -196,3 +196,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " vim-orgmode
 au BufRead,BufNewFile *.org set nowrap
+
+" Unite.vim
+nnoremap <leader>fr :<C-u>Unite -start-insert file_rec<CR>

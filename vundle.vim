@@ -21,13 +21,12 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'wesleyche/Trinity'
 Bundle 'wesleyche/SrcExpl'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
     Bundle 'fcitx.vim'
 endif
-Bundle 'DoxygenToolkit.vim'
 Bundle 'utl.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'Figlet.vim'
@@ -40,6 +39,7 @@ if v:version > 703 || (v:version == 703 && has('patch584'))
 endif
 
 Bundle "maksimr/vim-jsbeautify"
+Bundle "vim-scripts/vcscommand.vim"
 "}}}
 
 " utils {{{
@@ -82,8 +82,6 @@ Bundle 'leshill/vim-json'
 
 " orgmode {{{
 Bundle 'jceb/vim-orgmode'
-"Bundle 'hsitz/VimOrganizer'
-Bundle 'hughbien/org-vim'
 Bundle 'tpope/vim-speeddating'
 Bundle 'mattn/calendar-vim'
 Bundle 'dhruvasagar/vim-table-mode'
