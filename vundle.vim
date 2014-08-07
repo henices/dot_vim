@@ -31,7 +31,6 @@ Bundle 'utl.vim'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'Figlet.vim'
 Bundle "scrooloose/syntastic"
-Bundle "davidhalter/jedi-vim"
 Bundle "jnwhiteh/vim-golang"
 
 if v:version > 703 || (v:version == 703 && has('patch584'))
@@ -39,6 +38,7 @@ if v:version > 703 || (v:version == 703 && has('patch584'))
 endif
 
 Bundle "maksimr/vim-jsbeautify"
+Bundle "einars/js-beautify"
 Bundle "vim-scripts/vcscommand.vim"
 "}}}
 

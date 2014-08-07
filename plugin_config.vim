@@ -138,52 +138,8 @@ nmap <leader>cp :cp<cr>
 nmap <leader>cn :cn<cr>
 
 
-" DoxygenToolkit
-let g:DoxygenToolkit_briefTag_pre="@biref  "
-let g:DoxygenToolkit_paramTag_pre="@param "
-let g:DoxygenToolkit_returnTag="@return   "
-let g:DoxygenToolkit_authorName="zz@nsfocus"
-
-map <leader>f :Dox<cr>
-map <leader>a :DoxAuthor<cr>
-map <leader>b :DoxBlock<cr>
-
-
 " vim-markdown
 let g:vim_markdown_initial_foldlevel=1
-
-" python-mode
-"
-" Load rope plugin
-let g:pymode_rope = 1
-
-"
-"  Auto create and open ropeproject
-let g:pymode_rope_auto_project = 1
-
-" Enable autoimport
-let g:pymode_rope_enable_autoimport = 1
-
-" Disable pylint checking every save
-let g:pymode_lint_write = 0
-
-" Auto generate global cache
-let g:pymode_rope_autoimport_generate = 1
-let g:pymode_rope_autoimport_underlineds = 0
-let g:pymode_rope_codeassist_maxfixes = 10
-let g:pymode_rope_sorted_completions = 0
-let g:pymode_rope_extended_complete = 0
-let g:pymode_rope_autoimport_modules = ["os","shutil","datetime"]
-let g:pymode_rope_confirm_saving = 1
-let g:pymode_rope_global_prefix = "<C-x>p"
-let g:pymode_rope_local_prefix = "<C-c>r"
-let g:pymode_rope_vim_completion = 0
-let g:pymode_rope_guess_project = 1
-let g:pymode_rope_goto_def_newwin = ""
-let g:pymode_rope_always_show_complete_menu = 1
-
-" Enable python folding
-let g:pymode_folding = 0
 
 " vim-javascript
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -193,9 +149,19 @@ let g:html_indent_style1 = "inc"
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_autoclose_preview_window_after_completion=1
+
 
 " vim-orgmode
 au BufRead,BufNewFile *.org set nowrap
 
 " Unite.vim
 nnoremap <leader>fr :<C-u>Unite -start-insert file_rec<CR>
+nnoremap <leader>fb :<C-u>Unite buffer<CR>
+
+" vim-jsbeautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
