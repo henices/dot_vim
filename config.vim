@@ -1,10 +1,7 @@
 " .vimrc by henices
 
-" auto read when file modified
-set autoread
-" no button, cool
-"set go=
-"set shortmess=atl
+set autoread         "auto read when file modified
+"set go=             " no button, cool
 set showcmd
 set noerrorbells
 set visualbell
@@ -33,6 +30,7 @@ set smartcase
 set infercase
 
 " folding
+set foldenable
 set foldmethod=marker
 
 "encoding
@@ -49,9 +47,7 @@ if has('unix')
     if system('uname') =~ 'Darwin'
         set guifont=Menlo:h14
     else
-        "set guifont=Source\ Code\ Pro\ 12
         set guifont=Monaco\ 13
-        "set guifont=Ubuntu\ Mono\ 12
     endif
 endif
 
@@ -102,9 +98,6 @@ colors desert-warm-256
 " syntax color
 syntax enable
 syntax on
-
-set foldenable
-set showmatch
 
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
