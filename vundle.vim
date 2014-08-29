@@ -40,6 +40,7 @@ endif
 Bundle "maksimr/vim-jsbeautify"
 Bundle "einars/js-beautify"
 Bundle "vim-scripts/vcscommand.vim"
+Bundle "Shougo/unite-outline"
 "}}}
 
 " utils {{{

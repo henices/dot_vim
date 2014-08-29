@@ -157,7 +157,16 @@ au BufRead,BufNewFile *.org set nowrap
 
 " Unite.vim
 nnoremap <leader>fr :<C-u>Unite -start-insert file_rec<CR>
+nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
 nnoremap <leader>fb :<C-u>Unite buffer<CR>
+nnoremap <leader>sb :<C-u>Unite -quick-match buffer<CR>
+
+" For ack.
+if executable('ack-grep')
+    let g:unite_source_grep_command = 'ack-grep'
+    let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
+    let g:unite_source_grep_recursive_opt = ''
+endif
 
 " vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
