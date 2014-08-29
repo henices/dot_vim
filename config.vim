@@ -3,11 +3,11 @@
 " auto read when file modified
 set autoread
 " no button, cool
-set go=
+"set go=
 "set shortmess=atl
 set showcmd
 set noerrorbells
-"set visualbell
+set visualbell
 set history=1024
 set nonu
 set nobackup
@@ -19,12 +19,11 @@ set scrolloff=3
 set title
 set list
 
-set formatoptions=ctqmM
+set fileformats=unix,dos,mac
 
 " search settings
 set hlsearch
 set incsearch
-
 set showmatch
 set matchtime=2
 
@@ -33,19 +32,14 @@ set ignorecase
 set smartcase
 set infercase
 
-" Allow folding to play nice with Python and other well-indented code
-"set foldmethod=indent
-" Don't close all folds by default when file opens
-"set nofoldenable
+" folding
+set foldmethod=marker
 
 "encoding
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp936
-
-" avoid \r\n  windows format
-set ff=unix
 
 if has('win32') || has('win64')
     set guifont=consolas:h10:cANSI
@@ -91,6 +85,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+set autoindent
 set list listchars=tab:>-,trail:.,extends:>
 
 
