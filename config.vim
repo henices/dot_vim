@@ -45,9 +45,9 @@ endif
 
 if has('unix')
     if system('uname') =~ 'Darwin'
-        set guifont=Menlo:h14
+        set guifont=Menlo:h16
     else
-        set guifont=Monaco\ 13
+        set guifont=Monaco\ 14
     endif
 endif
 
