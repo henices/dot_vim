@@ -62,10 +62,14 @@ nmap <C-]><C-]>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-]><C-]>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 " tagbar
-if has('win32')
+if has('win32') || has('win64')
     let g:tagbar_ctags_bin='$VIMRUNTIME/ctags.exe'
 else
-    let g:tagbar_ctags_bin='/usr/bin/ctags'
+    if system('uname') =~ 'Darwin'
+        let g:tagbar_ctats_bin='/usr/local/bin/ctags'
+    else
+        let g:tagbar_ctags_bin='/usr/bin/ctags'
+    endif
 endif
 
 "let g:tagbar_right = 1
