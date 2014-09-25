@@ -154,6 +154,7 @@ let g:html_indent_style1 = "inc"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_show_diagnostics_ui = 0
 
 
 " vim-orgmode
@@ -178,3 +179,10 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" for syntastic
+
+let g:syntastic_cpp_config_file = '.config'
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_c_config_file = '.config'
+let g:syntastic_c_check_header = 1
