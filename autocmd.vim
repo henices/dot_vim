@@ -7,4 +7,11 @@ autocmd! bufwritepost .vimrc source %
 
 " set filetype for pac file
 autocmd! BufRead,BufNewFile *.pac set filetype=javascript
-autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC c', '#+END_SRC', 'c')
+
+" for SyntaxRange
+if exists('g:loaded_SyntaxRange')
+    autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC c', '#+END_SRC', 'c')
+    autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC cpp', '#+END_SRC', 'cpp')
+    autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC python', '#+END_SRC', 'python')
+    autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC sh', '#+END_SRC', 'sh')
+endif
