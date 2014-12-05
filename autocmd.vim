@@ -15,3 +15,6 @@ if exists('g:loaded_SyntaxRange')
     autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC python', '#+END_SRC', 'python')
     autocmd Syntax * call SyntaxRange#Include('#+BEGIN_SRC sh', '#+END_SRC', 'sh')
 endif
+
+" for commentary.vim
+autocmd FileType python,shell set commentstring=#\ %s

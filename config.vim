@@ -9,6 +9,7 @@ set history=1024
 set nonu
 set nobackup
 set bs=2
+set ttyfast
 
 set scrolljump=5
 set scrolloff=3

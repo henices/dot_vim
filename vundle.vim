@@ -42,11 +42,15 @@ Bundle "einars/js-beautify"
 Bundle "vim-scripts/vcscommand.vim"
 Bundle "vim-scripts/SyntaxRange"
 Bundle "Shougo/unite-outline"
+Bundle "nvie/vim-flake8"
+Bundle "tell-k/vim-autopep8"
+Bundle "tpope/vim-commentary"
 "}}}
 
 " utils {{{
-"Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
+"Bundle 'farseer90718/unite-workflow'
+Bundle 'mattn/webapi-vim'
+Bundle 'kmnk/vim-unite-svn'
 "}}}
 
 " vimshell {{{
@@ -71,6 +75,7 @@ Bundle 'twerth/ir_black'
 Bundle 'tomasr/molokai'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'rainux/vim-desert-warm-256'
+Bundle 'altercation/vim-colors-solarized'
 "}}}
 
 " syntax {{{
