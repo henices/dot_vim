@@ -165,7 +165,9 @@ au BufRead,BufNewFile *.org set nowrap
 nnoremap <leader>fr :<C-u>Unite -start-insert file_rec<CR>
 nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
 nnoremap <leader>fb :<C-u>Unite buffer<CR>
-nnoremap <leader>sb :<C-u>Unite -quick-match buffer<CR>
+nnoremap <leader>qb :<C-u>Unite -quick-match buffer<CR>
+
+nnoremap <leader>ss :<C-u>Unite -start-insert svn/status<CR>
 
 " For ack.
 if executable('ack-grep')

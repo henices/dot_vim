@@ -21,7 +21,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'wesleyche/Trinity'
 Bundle 'wesleyche/SrcExpl'
-"Bundle 'klen/python-mode'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
@@ -50,13 +49,14 @@ Bundle "tpope/vim-commentary"
 " utils {{{
 "Bundle 'farseer90718/unite-workflow'
 Bundle 'mattn/webapi-vim'
-Bundle 'kmnk/vim-unite-svn'
 "}}}
 
-" vimshell {{{
+" unite {{{
 Bundle "Shougo/vimshell.vim"
 Bundle "Shougo/vimproc.vim"
 Bundle "Shougo/unite.vim"
+Bundle 'kmnk/vim-unite-svn'
+Bundle 'Shougo/neomru.vim'
 "}}}
 
 " perl regular expression {{{

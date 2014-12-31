@@ -18,3 +18,8 @@ endif
 
 " for commentary.vim
 autocmd FileType python,shell set commentstring=#\ %s
+
+autocmd FileType unite call s:unite_my_settings()
+    function! s:unite_my_settings() "{{{
+        imap <buffer> jj      <Plug>(unite_insert_leave)
+    endfunction "}}}
