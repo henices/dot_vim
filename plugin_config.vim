@@ -162,7 +162,7 @@ let g:ycm_show_diagnostics_ui = 0
 au BufRead,BufNewFile *.org set nowrap
 
 " Unite.vim
-nnoremap <leader>fr :<C-u>Unite -start-insert file_rec<CR>
+nnoremap <leader>fr :<C-u>Unite -start-insert file_rec/async<CR>
 nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
 nnoremap <leader>fb :<C-u>Unite buffer<CR>
 nnoremap <leader>qb :<C-u>Unite -quick-match buffer<CR>
@@ -175,6 +175,7 @@ if executable('ack-grep')
     let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
     let g:unite_source_grep_recursive_opt = ''
 endif
+
 
 " vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -190,3 +191,8 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_config_file = '.config'
 let g:syntastic_c_check_header = 1
 let g:syntastic_quiet_messages = { "type": "style" }
+
+" utl.vim
+if !exists("g:utl_cfg_hdl_scm_http_system")
+    let g:utl_cfg_hdl_scm_http_system="silent !/usr/bin/google-chrome-unstable '%u#%f'"
+endif
