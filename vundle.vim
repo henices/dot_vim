@@ -49,14 +49,17 @@ Bundle "tpope/vim-commentary"
 " utils {{{
 "Bundle 'farseer90718/unite-workflow'
 Bundle 'mattn/webapi-vim'
+Bundle 'shime/vim-livedown'
 "}}}
 
 " unite {{{
 Bundle "Shougo/vimshell.vim"
 Bundle "Shougo/vimproc.vim"
 Bundle "Shougo/unite.vim"
+Bundle "junkblocker/unite-tasklist"
 Bundle 'kmnk/vim-unite-svn'
 Bundle 'Shougo/neomru.vim'
+Bundle 'henices/unite-stock'
 "}}}
 
 " perl regular expression {{{
@@ -82,7 +85,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/nasl.vim'
 Bundle 'csharp.vim'
 Bundle "pangloss/vim-javascript"
-Bundle 'plasticboy/vim-markdown'
+Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-markdown'
+Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'henices/vim-nbin'
 Bundle 'leshill/vim-json'
 "}}}

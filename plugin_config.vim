@@ -196,3 +196,14 @@ let g:syntastic_quiet_messages = { "type": "style" }
 if !exists("g:utl_cfg_hdl_scm_http_system")
     let g:utl_cfg_hdl_scm_http_system="silent !/usr/bin/google-chrome-unstable '%u#%f'"
 endif
+
+" vim-livedown
+
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 1
+
+" should the browser window pop-up upon previewing
+let g:livedown_open = 1 
+"
+" the port on which Livedown server will run
+let g:livedown_port = 9090

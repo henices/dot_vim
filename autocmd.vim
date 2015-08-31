@@ -5,6 +5,11 @@ endif
 
 autocmd! bufwritepost .vimrc source %
 
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
 " set filetype for pac file
 autocmd! BufRead,BufNewFile *.pac set filetype=javascript
 
