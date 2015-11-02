@@ -19,3 +19,10 @@ let maplocalleader = ","
 nmap <Leader>bp :bp<CR>
 nmap <Leader>bn :bn<CR>
 
+" copy file name to clipborad
+" The <leader> key is mapped to \
+nnoremap <leader>yf :let @+=expand("%:t")<cr>:echo "Copy file name done"<cr>
+
+" quickfix
+nmap <leader>cp :cp<cr>
+nmap <leader>cn :cn<cr>

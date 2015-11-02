@@ -88,13 +88,16 @@ set list listchars=tab:>-,trail:.,extends:>
 
 "set color
 set background=dark
+set t_Co=256
 "colors desert
 "colors peaksea
 "colors ps_color
 "colors af
-colors desert-warm-256
+"colors desert-warm-256
+colorscheme jellybeans
 "colors molokai
-
+"colors gruvbox
+"colors solarized
 
 " syntax color
 syntax enable
@@ -102,4 +105,5 @@ syntax on
 
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
+
 

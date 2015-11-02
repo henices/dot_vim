@@ -73,23 +73,23 @@ Bundle 'vim-scripts/tir_black'
 Bundle 'vim-scripts/af.vim'
 Bundle 'vim-scripts/enzyme.vim'
 Bundle 'vim-scripts/tango.vim'
+Bundle 'vim-scripts/BusyBee'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'w0ng/vim-hybrid'
 Bundle 'twerth/ir_black'
 Bundle 'tomasr/molokai'
+Bundle 'sjl/badwolf'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'rainux/vim-desert-warm-256'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'morhetz/gruvbox'
 "}}}
 
 " syntax {{{
 Bundle 'vim-scripts/nasl.vim'
-Bundle 'csharp.vim'
 Bundle "pangloss/vim-javascript"
 Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-markdown'
-Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'henices/vim-nbin'
-Bundle 'leshill/vim-json'
 "}}}
 
 " orgmode {{{

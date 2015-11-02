@@ -1,4 +1,4 @@
-" cscope settings
+"{{{ cscope settings
 
 if has("cscope")
     set csprg=/usr/bin/cscope
@@ -60,8 +60,9 @@ nmap <C-]><C-]>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-]><C-]>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-]><C-]>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-]><C-]>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+"}}}
 
-" tagbar
+"{{{ tagbar
 if has('win32') || has('win64')
     let g:tagbar_ctags_bin='$VIMRUNTIME/ctags.exe'
 else
@@ -73,6 +74,9 @@ else
 endif
 
 "let g:tagbar_right = 1
+"}}}
+
+"{{{ SrcExplorer
 
 " // The switch of the Source Explorer 
 nmap se :SrcExplToggle<CR> 
@@ -112,8 +116,9 @@ let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
 
 " // Set "<F12>" key for updating the tags file artificially 
 let g:SrcExpl_updateTagsKey = "<F12>" 
+"}}}
 
-" TagList
+"{{{ TagList
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 if has('win32')
@@ -121,83 +126,81 @@ if has('win32')
 else
     let Tlist_Ctags_Cmd='/usr/bin/ctags'
 endif
-
+"}}}
 
 " winmanager
 
 "let g:winManagerWindowLayout='FileExplorer|TagList'
 "nmap wm :WMToggle<cr>
 
-" Powerline
+"{{{ Powerline
 set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = "compatible"
-
-" copy file name to clipborad
-" The <leader> key is mapped to \
-nnoremap <leader>yf :let @+=expand("%:t")<cr>:echo "Copy file name done"<cr>
-
-" quickfix
-nmap <leader>cp :cp<cr>
-nmap <leader>cn :cn<cr>
+"}}}
 
 
-" vim-markdown
-let g:vim_markdown_initial_foldlevel=1
-
-" vim-javascript
+"{{{ vim-javascript
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+"}}}
 
-" YouCompleteMe
+"{{{ YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>jD :YcmCompleter GoToDefinition<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_show_diagnostics_ui = 0
+"}}}
 
 
-" vim-orgmode
+"{{{ vim-orgmode
 au BufRead,BufNewFile *.org set nowrap
+"}}}
 
-" Unite.vim
+"{{{ Unite.vim
 nnoremap <leader>fr :<C-u>Unite -start-insert file_rec/async<CR>
 nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
 nnoremap <leader>fb :<C-u>Unite buffer<CR>
 nnoremap <leader>qb :<C-u>Unite -quick-match buffer<CR>
 
 nnoremap <leader>ss :<C-u>Unite -start-insert svn/status<CR>
+"}}}
 
-" For ack.
+"{{{ For ack.
 if executable('ack-grep')
     let g:unite_source_grep_command = 'ack-grep'
     let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
     let g:unite_source_grep_recursive_opt = ''
 endif
+"}}}
 
 
-" vim-jsbeautify
+"{{{ vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+"}}}
 
-" for syntastic
+"{{{ for syntastic
 
 let g:syntastic_cpp_config_file = '.config'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_config_file = '.config'
 let g:syntastic_c_check_header = 1
 let g:syntastic_quiet_messages = { "type": "style" }
+"}}}
 
-" utl.vim
+"{{{ utl.vim
 if !exists("g:utl_cfg_hdl_scm_http_system")
     let g:utl_cfg_hdl_scm_http_system="silent !/usr/bin/google-chrome-unstable '%u#%f'"
 endif
+"}}}
 
-" vim-livedown
+"{{{vim-livedown
 
 " should markdown preview get shown automatically upon opening markdown buffer
 let g:livedown_autorun = 1
@@ -207,3 +210,12 @@ let g:livedown_open = 1
 "
 " the port on which Livedown server will run
 let g:livedown_port = 9090
+"}}}
+
+"{{{ gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+"}}}
+
+" {{{ markdown
+let g:markdown_fenced_languages = ['html', 'java', 'bash=sh', 'python']
+"}}}
