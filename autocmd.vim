@@ -15,3 +15,16 @@ autocmd FileType unite call s:unite_my_settings()
     function! s:unite_my_settings() "{{{
         imap <buffer> jj      <Plug>(unite_insert_leave)
     endfunction "}}}
+
+" {{{ for markdown syntax
+autocmd FileType markdown |
+      \hi def link markdownItalic              NONE |
+      \hi def link markdownItalicDelimiter     NONE |
+      \hi def link markdownBold                NONE |
+      \hi def link markdownBoldDelimiter       NONE |
+      \hi def link markdownBoldItalic          NONE |
+      \hi def link markdownBoldItalicDelimiter NONE
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+"}}}
