@@ -49,7 +49,8 @@ Bundle "tpope/vim-commentary"
 " utils {{{
 "Bundle 'farseer90718/unite-workflow'
 Bundle 'mattn/webapi-vim'
-Bundle 'shime/vim-livedown'
+"Bundle 'shime/vim-livedown'
+Bundle 'suan/vim-instant-markdown'
 "}}}
 
 " unite {{{

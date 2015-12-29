@@ -25,6 +25,6 @@ autocmd FileType markdown |
       \hi def link markdownBoldItalic          NONE |
       \hi def link markdownBoldItalicDelimiter NONE
 
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd! BufRead,BufNewFile *.md set filetype=markdown
 
 "}}}

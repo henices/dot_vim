@@ -217,6 +217,6 @@ let g:gruvbox_contrast_dark = 'hard'
 "}}}
 
 " {{{ markdown
-let g:markdown_fenced_languages = ['html', 'java', 'bash=sh', 'python', 'xml', 'perl', 'c', 'cpp']
+let g:markdown_fenced_languages = ['html', 'java', 'bash=sh', 'python', 'xml', 'perl', 'c', 'cpp', 'asm', 'make']
 
 "}}}
