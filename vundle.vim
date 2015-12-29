@@ -7,98 +7,100 @@ filetype off
 
 if has('win32')
     set rtp+=$VIM/vimfiles/bundle/vundle/
-    call vundle#rc('$VIM/vimfiles/bundle/')
+    call vundle#begin('$VIM/vimfiles/bundle/')
 else
     set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    call vundle#begin()
 endif
 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 "}}}
 
 " programming {{{
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'wesleyche/Trinity'
-Bundle 'wesleyche/SrcExpl'
-Bundle 'taglist.vim'
-Bundle 'majutsushi/tagbar'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'wesleyche/Trinity'
+Plugin 'wesleyche/SrcExpl'
+Plugin 'taglist.vim'
+Plugin 'majutsushi/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
-    Bundle 'fcitx.vim'
+    Plugin 'fcitx.vim'
 endif
-Bundle 'utl.vim'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'Figlet.vim'
-Bundle "scrooloose/syntastic"
-Bundle "jnwhiteh/vim-golang"
+Plugin 'utl.vim'
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'Figlet.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'jnwhiteh/vim-golang'
 
 if v:version > 703 || (v:version == 703 && has('patch584'))
-    Bundle "Valloric/YouCompleteMe"
+    Plugin 'Valloric/YouCompleteMe'
 endif
 
-Bundle "maksimr/vim-jsbeautify"
-Bundle "einars/js-beautify"
-Bundle "vim-scripts/vcscommand.vim"
-Bundle "vim-scripts/SyntaxRange"
-Bundle "Shougo/unite-outline"
-Bundle "nvie/vim-flake8"
-Bundle "tell-k/vim-autopep8"
-Bundle "tpope/vim-commentary"
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'vim-scripts/vcscommand.vim'
+Plugin 'vim-scripts/SyntaxRange'
+Plugin 'Shougo/unite-outline'
+Plugin 'nvie/vim-flake8'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'tpope/vim-commentary'
 "}}}
 
 " utils {{{
-"Bundle 'farseer90718/unite-workflow'
-Bundle 'mattn/webapi-vim'
-"Bundle 'shime/vim-livedown'
-Bundle 'suan/vim-instant-markdown'
+"Plugin 'farseer90718/unite-workflow'
+Plugin 'mattn/webapi-vim'
+"Plugin 'shime/vim-livedown'
+Plugin 'suan/vim-instant-markdown'
 "}}}
 
 " unite {{{
-Bundle "Shougo/vimshell.vim"
-Bundle "Shougo/vimproc.vim"
-Bundle "Shougo/unite.vim"
-Bundle "junkblocker/unite-tasklist"
-Bundle 'kmnk/vim-unite-svn'
-Bundle 'Shougo/neomru.vim'
-Bundle 'henices/unite-stock'
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'junkblocker/unite-tasklist'
+Plugin 'kmnk/vim-unite-svn'
+Plugin 'Shougo/neomru.vim'
+Plugin 'henices/unite-stock'
 "}}}
 
 " perl regular expression {{{
-Bundle "othree/eregex.vim"
+Plugin 'othree/eregex.vim'
 "}}}
 
 "color scheme {{{
-Bundle 'peaksea'
-Bundle 'desert256.vim'
-Bundle 'vim-scripts/tir_black'
-Bundle 'vim-scripts/af.vim'
-Bundle 'vim-scripts/enzyme.vim'
-Bundle 'vim-scripts/tango.vim'
-Bundle 'vim-scripts/BusyBee'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'twerth/ir_black'
-Bundle 'tomasr/molokai'
-Bundle 'sjl/badwolf'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'rainux/vim-desert-warm-256'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'morhetz/gruvbox'
+Plugin 'peaksea'
+Plugin 'desert256.vim'
+Plugin 'vim-scripts/tir_black'
+Plugin 'vim-scripts/af.vim'
+Plugin 'vim-scripts/enzyme.vim'
+Plugin 'vim-scripts/tango.vim'
+Plugin 'vim-scripts/BusyBee'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'twerth/ir_black'
+Plugin 'tomasr/molokai'
+Plugin 'sjl/badwolf'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'rainux/vim-desert-warm-256'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 "}}}
 
 " syntax {{{
-Bundle 'vim-scripts/nasl.vim'
-Bundle "pangloss/vim-javascript"
-Bundle 'godlygeek/tabular'
-Bundle 'henices/vim-nbin'
+Plugin 'vim-scripts/nasl.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'godlygeek/tabular'
+Plugin 'henices/vim-nbin'
 "}}}
 
 " orgmode {{{
-Bundle 'jceb/vim-orgmode'
-Bundle 'tpope/vim-speeddating'
-Bundle 'mattn/calendar-vim'
-Bundle 'dhruvasagar/vim-table-mode'
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
+Plugin 'mattn/calendar-vim'
+Plugin 'dhruvasagar/vim-table-mode'
 " }}}
+
+call vundle#end()
 
 filetype plugin indent on
 
