@@ -51,6 +51,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'mattn/webapi-vim'
 "Plugin 'shime/vim-livedown'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'drmikehenry/vim-fontsize'
 "}}}
 
 " unite {{{
