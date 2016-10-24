@@ -11,6 +11,9 @@ autocmd! BufRead,BufNewFile *.pac set filetype=javascript
 " for commentary.vim
 autocmd FileType python,shell set commentstring=#\ %s
 
+" shift the wrapped line another four spaces
+autocmd FileType python set breakindentopt=shift:4
+
 autocmd FileType unite call s:unite_my_settings()
     function! s:unite_my_settings() "{{{
         imap <buffer> jj      <Plug>(unite_insert_leave)
@@ -25,7 +28,4 @@ autocmd FileType markdown |
       \hi def link markdownBoldItalic          NONE |
       \hi def link markdownError               NONE |
       \hi def link markdownBoldItalicDelimiter NONE
-
-
-
 "}}}

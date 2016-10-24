@@ -223,3 +223,9 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:markdown_fenced_languages = ['diff', 'html', 'java', 'javascript', 'bash=sh', 'python', 'xml', 'perl', 'c', 'cpp', 'asm', 'make']
 
 "}}}
+
+" {{{ vim table mode
+
+let g:table_mode_corner="|"
+
+" }}}

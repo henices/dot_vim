@@ -49,8 +49,8 @@ Plugin 'tpope/vim-commentary'
 " utils {{{
 "Plugin 'farseer90718/unite-workflow'
 Plugin 'mattn/webapi-vim'
-"Plugin 'shime/vim-livedown'
-Plugin 'suan/vim-instant-markdown'
+Plugin 'shime/vim-livedown'
+"Plugin 'suan/vim-instant-markdown'
 Plugin 'drmikehenry/vim-fontsize'
 "}}}
 

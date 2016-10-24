@@ -1,7 +1,7 @@
 " .vimrc by henices
 
 set autoread         "auto read when file modified
-"set go=             " no button, cool
+set go=             " no button, cool
 set showcmd
 set noerrorbells
 set visualbell
@@ -85,6 +85,7 @@ set smarttab
 set autoindent
 set list listchars=tab:>-,trail:.,extends:>
 
+set showbreak=..
 
 "set color
 set background=dark
