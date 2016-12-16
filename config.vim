@@ -1,7 +1,7 @@
 " .vimrc by henices
 
 set autoread         "auto read when file modified
-set go=             " no button, cool
+"set go=             " no button, cool
 set showcmd
 set noerrorbells
 set visualbell
@@ -107,4 +107,4 @@ syntax on
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
 
-
+set ttimeoutlen=100
