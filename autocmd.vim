@@ -26,6 +26,7 @@ autocmd FileType markdown |
       \hi def link markdownBold                NONE |
       \hi def link markdownBoldDelimiter       NONE |
       \hi def link markdownBoldItalic          NONE |
+      \hi def link markdownBoldItalicDelimiter NONE |
       \hi def link markdownError               NONE |
-      \hi def link markdownBoldItalicDelimiter NONE
+      \hi def link markdownEscape              NONE
 "}}}
