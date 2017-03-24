@@ -1,8 +1,9 @@
 " windows control
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>h
-map <C-L> <C-W>l
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 nmap <C-E> :e#<CR>
 

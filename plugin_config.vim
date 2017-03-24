@@ -220,7 +220,9 @@ let g:gruvbox_contrast_dark = 'hard'
 "}}}
 
 " {{{ markdown
-let g:markdown_fenced_languages = ['diff', 'html', 'java', 'javascript', 'bash=sh', 'python', 'xml', 'perl', 'c', 'cpp', 'asm', 'make']
+let g:markdown_fenced_languages = ['diff=diff', 'html=html', 'java=java', 'bash=sh', 'viml=vim', 'python=python', 'xml=xml', 'perl=perl', 'c=c', 'cpp=cpp', 'asm=asm', 'make=make']
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_level = 2
 
 "}}}
 

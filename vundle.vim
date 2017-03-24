@@ -24,7 +24,7 @@ Plugin 'wesleyche/SrcExpl'
 Plugin 'taglist.vim'
 Plugin 'majutsushi/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
-    Plugin 'fcitx.vim'
+    Plugin 'lilydjwg/fcitx.vim'
 endif
 Plugin 'utl.vim'
 Plugin 'chrisbra/NrrwRgn'
@@ -35,6 +35,9 @@ Plugin 'jnwhiteh/vim-golang'
 if v:version > 703 || (v:version == 703 && has('patch584'))
     Plugin 'Valloric/YouCompleteMe'
 endif
+
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'zchee/deoplete-jedi'
 
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
@@ -47,17 +50,20 @@ Plugin 'tpope/vim-commentary'
 "}}}
 
 " utils {{{
-"Plugin 'farseer90718/unite-workflow'
+Plugin 'farseer90718/unite-workflow'
 Plugin 'mattn/webapi-vim'
 Plugin 'shime/vim-livedown'
 "Plugin 'suan/vim-instant-markdown'
 Plugin 'drmikehenry/vim-fontsize'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 "}}}
 
 " unite {{{
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/denite.nvim'
 Plugin 'junkblocker/unite-tasklist'
 Plugin 'kmnk/vim-unite-svn'
 Plugin 'Shougo/neomru.vim'
@@ -90,7 +96,6 @@ Plugin 'morhetz/gruvbox'
 " syntax {{{
 Plugin 'vim-scripts/nasl.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'godlygeek/tabular'
 Plugin 'henices/vim-nbin'
 "}}}
 
