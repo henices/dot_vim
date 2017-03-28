@@ -30,3 +30,19 @@ autocmd FileType markdown |
       \hi def link markdownError               NONE |
       \hi def link markdownEscape              NONE
 "}}}
+
+function! Md2Txt()
+    let tempbuf_in = tempname()
+    let tempbuf_out = tempname()
+
+    w `=tempbuf_in`
+
+    call job_start("pandoc -f markdown -t plain " . 
+        \ tempbuf_in, {'out_io': 'buffer', 'out_name': tempbuf_out})
+
+    new `=tempbuf_out`
+
+    1delete
+endfunction
+
+command! Md2t call Md2Txt()
