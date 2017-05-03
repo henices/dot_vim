@@ -57,11 +57,13 @@ Plugin 'shime/vim-livedown'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'skywind3000/asyncrun.vim'
+Plugin 'mhinz/vim-hugefile'
 "}}}
 
 " unite {{{
 Plugin 'Shougo/vimshell.vim'
-Plugin 'Shougo/vimproc.vim'
+"Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/denite.nvim'
 Plugin 'junkblocker/unite-tasklist'

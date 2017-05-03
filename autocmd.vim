@@ -31,13 +31,14 @@ autocmd FileType markdown |
       \hi def link markdownEscape              NONE
 "}}}
 
+" {{{ Md2Txt
 function! Md2Txt()
     let tempbuf_in = tempname()
     let tempbuf_out = tempname()
 
     w `=tempbuf_in`
 
-    call job_start("pandoc -f markdown -t plain " . 
+    call job_start("/usr/local/bin/pandoc -f markdown_github -t plain " . 
         \ tempbuf_in, {'out_io': 'buffer', 'out_name': tempbuf_out})
 
     new `=tempbuf_out`
@@ -46,3 +47,22 @@ function! Md2Txt()
 endfunction
 
 command! Md2t call Md2Txt()
+" }}}
+
+" {{{ Md2Html
+function! Md2Html()
+    let tempbuf_in = tempname()
+    let tempbuf_out = tempname()
+
+    w `=tempbuf_in`
+
+    call job_start("/usr/local/bin/pandoc -s -f markdown_github -t html " . 
+        \ tempbuf_in, {'out_io': 'buffer', 'out_name': tempbuf_out})
+
+    new `=tempbuf_out`
+
+    1delete
+endfunction
+
+command! Md2h call Md2Html()
+" }}}

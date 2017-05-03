@@ -231,3 +231,10 @@ let g:vim_markdown_folding_level = 2
 let g:table_mode_corner="|"
 
 " }}}
+
+
+" {{{ vim-hugefile
+let g:hugefile_trigger_size=10
+" }}}
+
+
