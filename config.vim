@@ -107,4 +107,6 @@ syntax on
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
 
+" faster response for fcitx
 set ttimeoutlen=100
+set completeopt-=preview

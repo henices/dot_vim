@@ -163,12 +163,17 @@ au BufRead,BufNewFile *.org set nowrap
 "}}}
 
 "{{{ Unite.vim
-nnoremap <leader>fr :<C-u>Unite -start-insert file_rec/async<CR>
-nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
-nnoremap <leader>fb :<C-u>Unite buffer<CR>
-nnoremap <leader>qb :<C-u>Unite -quick-match buffer<CR>
+"nnoremap <leader>fr :<C-u>Unite -start-insert file_rec/async<CR>
+"nnoremap <leader>fn :<C-u>Unite -start-insert file/new<CR>
+"nnoremap <leader>fb :<C-u>Unite buffer<CR>
+"nnoremap <leader>qb :<C-u>Unite -quick-match buffer<CR>
+"
+"nnoremap <leader>ss :<C-u>Unite -start-insert svn/status<CR>
+"}}}
 
-nnoremap <leader>ss :<C-u>Unite -start-insert svn/status<CR>
+"{{{ Denite.nvim
+"call denite#custom#option('default', 'winheight', 25)
+nnoremap <leader>fr :<C-u>Denite file_rec<CR>
 "}}}
 
 "{{{ For ack.
@@ -178,7 +183,6 @@ if executable('ack-grep')
     let g:unite_source_grep_recursive_opt = ''
 endif
 "}}}
-
 
 "{{{ vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -232,9 +236,32 @@ let g:table_mode_corner="|"
 
 " }}}
 
-
 " {{{ vim-hugefile
 let g:hugefile_trigger_size=10
 " }}}
 
+" {{{ jellybeans.vim
+let g:jellybeans_use_lowcolor_black = 0
+"}}}
 
+" {{{ Use deoplete.
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+" Use smartcase.
+let g:deoplete#enable_smart_case = 1
+
+
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+" }}}

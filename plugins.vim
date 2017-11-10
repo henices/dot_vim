@@ -31,12 +31,20 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-if v:version > 703 || (v:version == 703 && has('patch584'))
-    Plug 'Valloric/YouCompleteMe'
+"if v:version > 703 || (v:version == 703 && has('patch584'))
+"    Plug 'Valloric/YouCompleteMe'
+"endif
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-"Plug 'Shougo/deoplete.nvim'
-"Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-clang'
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
@@ -56,8 +64,8 @@ Plug 'shime/vim-livedown'
 Plug 'drmikehenry/vim-fontsize'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'skywind3000/asyncrun.vim'
 Plug 'mhinz/vim-hugefile'
+Plug 'mopp/unite-rss'
 "Plug 'ashisha/image.vim'
 "}}}
 
@@ -70,6 +78,7 @@ Plug 'junkblocker/unite-tasklist'
 Plug 'kmnk/vim-unite-svn'
 Plug 'Shougo/neomru.vim'
 Plug 'henices/unite-stock'
+Plug 'henices/denite-stock'
 "}}}
 
 " perl regular expression {{{
