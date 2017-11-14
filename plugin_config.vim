@@ -261,3 +261,8 @@ return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
 " }}}
+
+" {{{ deoplete-clang
+let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
+" }}}
