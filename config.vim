@@ -1,7 +1,7 @@
 " .vimrc by henices
 
 set autoread         "auto read when file modified
-"set go=             " no button, cool
+set go-=T
 set showcmd
 set noerrorbells
 set visualbell
@@ -95,7 +95,8 @@ set t_Co=256
 "colors ps_color
 "colors af
 "colors desert-warm-256
-colorscheme jellybeans
+"colorscheme jellybeans
+colors hybrid
 "colors molokai
 "colors gruvbox
 "colors solarized
@@ -111,3 +112,5 @@ set wildignore+=*.swp,*.so,*.exe
 set ttimeoutlen=100
 set completeopt+=longest,menuone
 set completeopt-=preview
+
+
