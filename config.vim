@@ -68,6 +68,11 @@ else
     set clipboard=unnamedplus
 endif
 
+" Maximize gvim window, a little tricky
+if has('gui_running')
+  set lines=200 columns=200
+endif
+
 "set mouse=a
 
 " for better coding style, 80 columns

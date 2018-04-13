@@ -31,14 +31,15 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-if !has('nvim')
-    if v:version > 703 || (v:version == 703 && has('patch584'))
-        Plug 'Valloric/YouCompleteMe'
-    endif
-endif
+"if !has('nvim')
+"    if v:version > 703 || (v:version == 703 && has('patch584'))
+"        Plug 'Valloric/YouCompleteMe'
+"    endif
+"endif
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
@@ -117,6 +118,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'mattn/calendar-vim'
 Plug 'dhruvasagar/vim-table-mode'
 " }}}
+
+Plug 'equalsraf/neovim-gui-shim'
 
 call plug#end()
 
