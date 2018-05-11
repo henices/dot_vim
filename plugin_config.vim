@@ -1,15 +1,27 @@
 "{{{ cscope settings
 
+"if has("cscope")
+"    set csprg=/usr/bin/cscope
+"    set csto=1
+"    set cscopetag
+"    set nocsverb
+"    " add any database in current directory
+"    if filereadable("cscope.out")
+"        cs add cscope.out
+"    elseif $CSCOPE_DB != ""
+"        cs add $CSCOPE_DB
+"    endif
+"    set csverb
+"endif
+
 if has("cscope")
-    set csprg=/usr/bin/cscope
+    set csprg=/usr/bin/gtags-cscope
     set csto=1
     set cscopetag
     set nocsverb
     " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
+    if filereadable("GTAGS")
+        cs add GTAGS
     endif
     set csverb
 endif
@@ -128,10 +140,11 @@ else
 endif
 "}}}
 
-" winmanager
+"{{{ winmanager
 
 "let g:winManagerWindowLayout='FileExplorer|TagList'
 "nmap wm :WMToggle<cr>
+"}}}
 
 "{{{ Powerline
 set laststatus=2
