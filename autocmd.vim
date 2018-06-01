@@ -14,8 +14,9 @@ autocmd FileType python,shell set commentstring=#\ %s
 " shift the wrapped line another four spaces
 autocmd FileType python set breakindentopt=shift:4
 
+" {{{ unite
 autocmd FileType unite call s:unite_my_settings()
-    function! s:unite_my_settings() "{{{
+    function! s:unite_my_settings()
         imap <buffer> jj      <Plug>(unite_insert_leave)
     endfunction "}}}
 
@@ -66,3 +67,7 @@ endfunction
 
 command! Md2h call Md2Html()
 " }}}
+
+" {{{
+nnoremap <silent> <F9> :TagbarToggle<CR>
+" ]}}
