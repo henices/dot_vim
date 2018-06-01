@@ -68,6 +68,6 @@ endfunction
 command! Md2h call Md2Html()
 " }}}
 
-" {{{
+" {{{ tagbar
 nnoremap <silent> <F9> :TagbarToggle<CR>
 " ]}}
