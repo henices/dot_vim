@@ -73,9 +73,10 @@ Plug 'mopp/unite-rss'
 
 " unite {{{
 Plug 'Shougo/vimshell.vim'
-"Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/denite.nvim'
+Plug 'devjoe/vim-codequery'
 Plug 'junkblocker/unite-tasklist'
 Plug 'kmnk/vim-unite-svn'
 Plug 'Shougo/neomru.vim'

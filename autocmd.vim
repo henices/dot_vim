@@ -5,8 +5,11 @@ endif
 
 autocmd! bufwritepost .vimrc source %
 
-" set filetype for pac file
+" {{{set filetype
 autocmd! BufRead,BufNewFile *.pac set filetype=javascript
+autocmd! BufRead,BufNewFile *.pyx set filetype=python
+" }}}
+
 
 " for commentary.vim
 autocmd FileType python,shell set commentstring=#\ %s

@@ -186,7 +186,18 @@ au BufRead,BufNewFile *.org set nowrap
 
 "{{{ Denite.nvim
 "call denite#custom#option('default', 'winheight', 25)
-nnoremap <leader>fr :<C-u>Denite file_rec<CR>
+call denite#custom#var('file/rec', 'command',
+\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+nnoremap <leader>fr :<C-u>Denite file/rec<CR>
+
+" Ag command on grep source
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts',
+		\ ['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
 "}}}
 
 "{{{ For ack.
@@ -279,3 +290,6 @@ endfunction"}}}
 let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
 " }}}
+
+" 
+let g:deoplete#sources#jedi#python_path = "/usr/bin/python3"
