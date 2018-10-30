@@ -117,5 +117,3 @@ set wildignore+=*.swp,*.so,*.exe
 set ttimeoutlen=100
 set completeopt+=longest,menuone
 set completeopt-=preview
-
-
