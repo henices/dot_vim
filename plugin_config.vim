@@ -189,6 +189,7 @@ au BufRead,BufNewFile *.org set nowrap
 call denite#custom#var('file/rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 nnoremap <leader>fr :<C-u>Denite file/rec<CR>
+nnoremap <leader>sb :<C-u>Denite buffer<CR>
 
 " Ag command on grep source
 call denite#custom#var('grep', 'command', ['ag'])
