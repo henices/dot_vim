@@ -186,6 +186,7 @@ au BufRead,BufNewFile *.org set nowrap
 
 "{{{ Denite.nvim
 "call denite#custom#option('default', 'winheight', 25)
+let g:python_host_prog="/usr/bin/python3"
 call denite#custom#var('file/rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 nnoremap <leader>fr :<C-u>Denite file/rec<CR>
