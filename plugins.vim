@@ -13,7 +13,8 @@ endif
 "}}}
 
 " programming {{{
-Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'wesleyche/Trinity'
 Plug 'wesleyche/SrcExpl'
@@ -61,12 +62,12 @@ Plug 'tpope/vim-commentary'
 " utils {{{
 Plug 'farseer90718/unite-workflow'
 Plug 'mattn/webapi-vim'
-Plug 'shime/vim-livedown'
+"Plug 'shime/vim-livedown'
 "Plug 'suan/vim-instant-markdown'
 Plug 'drmikehenry/vim-fontsize'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'mhinz/vim-hugefile'
+"Plug 'mhinz/vim-hugefile'
 Plug 'mopp/unite-rss'
 "Plug 'ashisha/image.vim'
 "}}}
