@@ -170,7 +170,6 @@ let g:ycm_server_log_level = 'debug'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 "}}}
 
-
 "{{{ vim-orgmode
 au BufRead,BufNewFile *.org set nowrap
 "}}}
@@ -187,8 +186,28 @@ au BufRead,BufNewFile *.org set nowrap
 "{{{ Denite.nvim
 "call denite#custom#option('default', 'winheight', 25)
 let g:python_host_prog="/usr/bin/python3"
+
+" Define mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction
+
+" Change file/rec command.
 call denite#custom#var('file/rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+
 nnoremap <leader>fr :<C-u>Denite file/rec<CR>
 nnoremap <leader>sb :<C-u>Denite buffer<CR>
 
@@ -293,5 +312,6 @@ let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
 " }}}
 
-" 
+" {{{deoplete
 let g:deoplete#sources#jedi#python_path = "/usr/bin/python3"
+"}}}
