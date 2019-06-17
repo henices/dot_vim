@@ -152,7 +152,6 @@ set t_Co=256
 let g:Powerline_symbols = "compatible"
 "}}}
 
-
 "{{{ vim-javascript
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -239,11 +238,17 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 "{{{ for syntastic
 
-let g:syntastic_cpp_config_file = '.config'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_c_config_file = '.config'
-let g:syntastic_c_check_header = 1
-let g:syntastic_quiet_messages = { "type": "style" }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = '-E'
 "}}}
 
 "{{{ utl.vim
