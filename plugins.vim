@@ -26,7 +26,7 @@ endif
 Plug 'vim-scripts/utl.vim'
 Plug 'chrisbra/NrrwRgn'
 Plug 'vim-scripts/Figlet.vim'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'jnwhiteh/vim-golang'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
