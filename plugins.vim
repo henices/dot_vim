@@ -54,8 +54,8 @@ Plug 'einars/js-beautify'
 Plug 'vim-scripts/vcscommand.vim'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'Shougo/unite-outline'
-Plug 'nvie/vim-flake8'
-Plug 'tell-k/vim-autopep8'
+"Plug 'nvie/vim-flake8'
+"Plug 'tell-k/vim-autopep8'
 Plug 'tpope/vim-commentary'
 "}}}
 
