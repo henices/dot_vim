@@ -248,8 +248,8 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_write = 0
 
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_python_pylint_args = '-E'
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_python_checkers = ['pyflakes']
 "}}}
 
 "{{{ utl.vim
