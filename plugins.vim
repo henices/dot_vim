@@ -32,23 +32,19 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-"if !has('nvim')
-"    if v:version > 703 || (v:version == 703 && has('patch584'))
-"        Plug 'Valloric/YouCompleteMe'
-"    endif
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --go-completer'}
+
+"if has('nvim')
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
 "endif
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-clang'
+"
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+"Plug 'zchee/deoplete-jedi'
+"Plug 'zchee/deoplete-clang'
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'

@@ -194,7 +194,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_keep_logfiles = 0
 let g:ycm_server_log_level = 'debug'
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 "}}}
 
 "{{{ vim-orgmode
