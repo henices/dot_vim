@@ -32,7 +32,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer --go-completer'}
+Plug 'ycm-core/YouCompleteMe'
 
 "if has('nvim')
 "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -109,6 +109,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/nasl.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'henices/vim-nbin'
+Plug 'henices/llvm.vim'
 "}}}
 
 " orgmode {{{
