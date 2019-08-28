@@ -187,14 +187,14 @@ let g:html_indent_style1 = "inc"
 "}}}
 
 "{{{ YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>jD :YcmCompleter GoToDefinition<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_keep_logfiles = 0
 let g:ycm_server_log_level = 'debug'
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 "}}}
 
 "{{{ vim-orgmode

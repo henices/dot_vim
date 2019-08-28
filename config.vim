@@ -77,9 +77,9 @@ endif
 
 " for better coding style, 80 columns
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=100
 else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 endif
 
 "tab control
