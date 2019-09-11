@@ -32,7 +32,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --clang-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer --clang-completer' }
 
 "if has('nvim')
 "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
