@@ -24,15 +24,15 @@ autocmd FileType unite call s:unite_my_settings()
     endfunction "}}}
 
 " {{{ for markdown syntax
-autocmd FileType markdown |
-      \hi def link markdownItalic              NONE |
-      \hi def link markdownItalicDelimiter     NONE |
-      \hi def link markdownBold                NONE |
-      \hi def link markdownBoldDelimiter       NONE |
-      \hi def link markdownBoldItalic          NONE |
-      \hi def link markdownBoldItalicDelimiter NONE |
-      \hi def link markdownError               NONE |
-      \hi def link markdownEscape              NONE
+"autocmd FileType markdown |
+"      \hi def link markdownItalic              NONE |
+"      \hi def link markdownItalicDelimiter     NONE |
+"      \hi def link markdownBold                NONE |
+"      \hi def link markdownBoldDelimiter       NONE |
+"      \hi def link markdownBoldItalic          NONE |
+"      \hi def link markdownBoldItalicDelimiter NONE |
+"      \hi def link markdownError               NONE |
+"      \hi def link markdownEscape              NONE
 "}}}
 
 " {{{ Md2Txt
