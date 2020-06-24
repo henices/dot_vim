@@ -326,14 +326,16 @@ let g:jellybeans_use_lowcolor_black = 0
 " {{{ Use deoplete.
 "
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" Use smartcase.
-let g:deoplete#enable_smart_case = 1
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
+    " Use smartcase.
+    call deoplete#custom#option('smart_case', v:true)
 
-inoremap <silent><expr> <TAB>
-\ pumvisible() ? "\<C-n>" :
-\ <SID>check_back_space() ? "\<TAB>" :
-\ deoplete#mappings#manual_complete()
+    inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+endif
 function! s:check_back_space() abort "{{{
 let col = col('.') - 1
 return !col || getline('.')[col - 1]  =~ '\s'
