@@ -76,8 +76,11 @@ Plug 'devjoe/vim-codequery'
 Plug 'junkblocker/unite-tasklist'
 Plug 'kmnk/vim-unite-svn'
 Plug 'Shougo/neomru.vim'
-Plug 'henices/unite-stock'
-Plug 'henices/denite-stock'
+if has('nvim')
+    Plug 'henices/denite-stock'
+else
+    Plug 'henices/unite-stock'
+endif
 "}}}
 
 " perl regular expression {{{
