@@ -21,7 +21,7 @@ Plug 'wesleyche/SrcExpl'
 Plug 'vim-scripts/taglist.vim'
 Plug 'majutsushi/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
-    Plug 'lilydjwg/fcitx.vim'
+    Plug 'lilydjwg/fcitx.vim' , { 'branch': 'fcitx4' }
 endif
 Plug 'vim-scripts/utl.vim'
 Plug 'chrisbra/NrrwRgn'
