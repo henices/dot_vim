@@ -39,7 +39,7 @@ if has('nvim')
     Plug 'zchee/deoplete-jedi'
     Plug 'zchee/deoplete-clang'
 else
-    Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer --clang-completer' }
+    Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer --clangd-completer' }
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
