@@ -7,4 +7,4 @@
 5. Awesome color schemes
 6. vim powerline support
 7. static syntax checking
-
+8. gtags and gtags-cscope support
