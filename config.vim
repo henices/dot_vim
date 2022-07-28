@@ -15,6 +15,7 @@ set scrolljump=5
 set scrolloff=3
 
 set title
+set titleold=
 set list
 
 set fileformats=unix,dos,mac
