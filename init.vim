@@ -1,5 +1,9 @@
 " by henices
 
+if exists("g:neovide")
+" Put anything you want to happen only in Neovide here
+let g:neovide_cursor_animation_length = 0
+endif
 
 source ~/.vim/plugins.vim
 source ~/.vim/config.vim
