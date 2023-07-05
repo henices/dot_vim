@@ -13,6 +13,7 @@ endif
 "}}}
 
 " programming {{{
+Plug 'nordtheme/vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -59,7 +60,7 @@ Plug 'farseer90718/unite-workflow'
 Plug 'mattn/webapi-vim'
 "Plug 'shime/vim-livedown'
 "Plug 'suan/vim-instant-markdown'
-Plug 'drmikehenry/vim-fontsize'
+"Plug 'drmikehenry/vim-fontsize'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 "Plug 'mhinz/vim-hugefile'
@@ -71,7 +72,7 @@ Plug 'mopp/unite-rss'
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/denite.nvim'
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'devjoe/vim-codequery'
 Plug 'junkblocker/unite-tasklist'
 Plug 'kmnk/vim-unite-svn'
