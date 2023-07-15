@@ -55,7 +55,7 @@ endif
 
 " some windows shortcut support, such as ctrc a, ctrl c ...
 " encoding
-if has('win32')
+if has('win32') || has('win64')
     source $VIMRUNTIME/mswin.vim
     "behave mswin
     source $VIMRUNTIME/delmenu.vim
@@ -63,10 +63,16 @@ if has('win32')
     language messages zh_CN.utf-8
 endif
 
-if has('win32')
+if has('win32') || has('win64')
     set clipboard=unnamed
-else
-    set clipboard=unnamedplus
+endif
+
+if has('unix')
+    if system('uname') =~ 'Darwin'
+        set clipboard=unnamed "OSX
+    else
+        set clipboard=unnamedplus "Linux
+    endif
 endif
 
 " Maximize gvim window, a little tricky
