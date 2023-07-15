@@ -17,7 +17,14 @@ if has("cscope")
 " To use 'vim -t ', ':tag' and '<C-]>'
     set cscopetag
 
-    set csprg=/usr/bin/gtags-cscope
+    if has('unix')
+        if system('uname') =~ 'Darwin'
+            set csprg=/usr/local/bin/gtags-cscope
+        else
+            set csprg=/usr/bin/gtags-cscope
+        endif
+    endif
+
     set csto=1
     set nocsverb
 
@@ -112,16 +119,6 @@ let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
 let g:SrcExpl_updateTagsKey = "<F12>" 
 "}}}
 
-"{{{ TagList
-let Tlist_Show_One_File = 1
-let Tlist_Exit_OnlyWindow = 1
-if has('win32')
-    let Tlist_Ctags_Cmd='$VIMRUNTIME/ctags.exe'
-else
-    let Tlist_Ctags_Cmd='/usr/bin/ctags'
-endif
-"}}}
-
 "{{{ winmanager
 
 "let g:winManagerWindowLayout='FileExplorer|TagList'
@@ -148,7 +145,13 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_keep_logfiles = 0
 let g:ycm_server_log_level = 'debug'
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+if has('unix')
+    if system('uname') =~ 'Darwin'
+        let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
+    else
+        let g:ycm_server_python_interpreter = '/usr/bin/python3'
+    endif
+endif
 "}}}
 
 "{{{ vim-orgmode
@@ -305,3 +308,7 @@ let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
 " {{{deoplete
 let g:deoplete#sources#jedi#python_path = "/usr/bin/python3"
 "}}}
+
+" {{{ fzf.vim
+let g:fzf_layout = { 'down': '40%' }
+" }}}
