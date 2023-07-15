@@ -59,11 +59,12 @@ Plug 'mattn/webapi-vim'
 "Plug 'shime/vim-livedown'
 "Plug 'suan/vim-instant-markdown'
 "Plug 'drmikehenry/vim-fontsize'
+"Plug 'mhinz/vim-hugefile'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-"Plug 'mhinz/vim-hugefile'
 Plug 'mopp/unite-rss'
-"Plug 'ashisha/image.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "}}}
 
 " unite {{{
