@@ -102,10 +102,11 @@ set t_Co=256
 "colors af
 "colors desert-warm-256
 "colorscheme jellybeans
-colors hybrid
+"colors hybrid
 "colors molokai
 "colors gruvbox
 "colors solarized
+colors nord
 
 " syntax color
 syntax enable
