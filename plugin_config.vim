@@ -283,30 +283,30 @@ let g:jellybeans_use_lowcolor_black = 0
 " {{{ Use deoplete.
 "
 " Use deoplete.
-if has('nvim')
-    let g:deoplete#enable_at_startup = 1
-    " Use smartcase.
-    call deoplete#custom#option('smart_case', v:true)
-
-    inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ deoplete#mappings#manual_complete()
-endif
-function! s:check_back_space() abort "{{{
-let col = col('.') - 1
-return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-
-" }}}
-
-" {{{ deoplete-clang
-let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
-" }}}
+"if has('nvim')
+"    let g:deoplete#enable_at_startup = 1
+"    " Use smartcase.
+"    call deoplete#custom#option('smart_case', v:true)
+"
+"    inoremap <silent><expr> <TAB>
+"    \ pumvisible() ? "\<C-n>" :
+"    \ <SID>check_back_space() ? "\<TAB>" :
+"    \ deoplete#mappings#manual_complete()
+"endif
+"function! s:check_back_space() abort "{{{
+"let col = col('.') - 1
+"return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction"}}}
+"
+"" }}}
+"
+"" {{{ deoplete-clang
+"let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
+"let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang'
+"" }}}
 
 " {{{deoplete
-let g:deoplete#sources#jedi#python_path = "/usr/bin/python3"
+"let g:deoplete#sources#jedi#python_path = "/usr/bin/python3"
 "}}}
 
 " {{{ fzf.vim

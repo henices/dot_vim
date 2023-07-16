@@ -34,16 +34,7 @@ Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
 
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-    Plug 'zchee/deoplete-jedi'
-    Plug 'zchee/deoplete-clang'
-else
-    Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer --clangd-completer' }
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --go-completer --clangd-completer' }
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
