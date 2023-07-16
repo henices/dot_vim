@@ -345,6 +345,8 @@ let g:Lf_Gtags = '/usr/local/bin/gtags'
 let g:Lf_Gtagsconf = '/usr/local/share/gtags/gtags.conf'
 let g:Lf_Gtagslabel = 'native-pygments'
 
+nmap <unique> <leader>fr <Plug>LeaderfRgPrompt
+
 nmap <leader>fgd <Plug>LeaderfGtagsDefinition
 nmap <leader>fgr <Plug>LeaderfGtagsReference
 nmap <leader>fgs <Plug>LeaderfGtagsSymbol
