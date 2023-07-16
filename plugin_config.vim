@@ -336,13 +336,23 @@ noremap <leader>fl :LeaderfLine<cr>
 noremap <leader>fw :LeaderfWindow<cr>
 
 let $GTAGSLABEL='native-pygments'
-let $GTAGSCONF='/usr/local/share/gtags/gtags.conf'
+
+if has('unix')
+    if system('uname') =~ 'Darwin'
+        let $GTAGSCONF='/usr/local/share/gtags/gtags.conf'
+        let g:Lf_Global = '/usr/local/bin/global'
+        let g:Lf_Gtags = '/usr/local/bin/gtags'
+        let g:Lf_Gtagsconf = '/usr/local/share/gtags/gtags.conf'
+    else
+        let $GTAGSCONF='/etc/gtags.conf'
+        let g:Lf_Global = '/usr/bin/global'
+        let g:Lf_Gtags = '/usr/bin/gtags'
+        let g:Lf_Gtagsconf = '/etc/gtags.conf'
+    endif
+endif
 
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_GtagsAutoUpdate = 1
-let g:Lf_Global = '/usr/local/bin/global'
-let g:Lf_Gtags = '/usr/local/bin/gtags'
-let g:Lf_Gtagsconf = '/usr/local/share/gtags/gtags.conf'
 let g:Lf_Gtagslabel = 'native-pygments'
 
 nmap <unique> <leader>fr <Plug>LeaderfRgPrompt
