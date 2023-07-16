@@ -18,10 +18,10 @@ autocmd FileType python,shell set commentstring=#\ %s
 autocmd FileType python set breakindentopt=shift:4
 
 " {{{ unite
-autocmd FileType unite call s:unite_my_settings()
-    function! s:unite_my_settings()
-        imap <buffer> jj      <Plug>(unite_insert_leave)
-    endfunction "}}}
+"autocmd FileType unite call s:unite_my_settings()
+"    function! s:unite_my_settings()
+"        imap <buffer> jj      <Plug>(unite_insert_leave)
+"    endfunction "}}}
 
 " {{{ for markdown syntax
 "autocmd FileType markdown |
