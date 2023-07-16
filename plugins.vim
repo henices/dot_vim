@@ -13,6 +13,8 @@ endif
 "}}}
 
 " programming {{{
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -63,24 +65,24 @@ Plug 'mattn/webapi-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'mopp/unite-rss'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 "}}}
 
 " unite {{{
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'devjoe/vim-codequery'
-Plug 'junkblocker/unite-tasklist'
-Plug 'kmnk/vim-unite-svn'
-Plug 'Shougo/neomru.vim'
-if has('nvim')
-    Plug 'henices/denite-stock'
-else
-    Plug 'henices/unite-stock'
-endif
+"Plug 'Shougo/unite.vim'
+"Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'junkblocker/unite-tasklist'
+"Plug 'kmnk/vim-unite-svn'
+"Plug 'Shougo/neomru.vim'
+"if has('nvim')
+"    Plug 'henices/denite-stock'
+"else
+"    Plug 'henices/unite-stock'
+"endif
 "}}}
 
 " perl regular expression {{{
