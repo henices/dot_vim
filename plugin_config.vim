@@ -367,3 +367,31 @@ noremap <leader>fgn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fgp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 
 "}}}
+
+"{{{ ale
+
+let g:ale_set_highlights = 0
+let g:ale_completion_enabled = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_insert_leave = 0
+let g:ale_set_signs = 0
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let g:ale_echo_cursor = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
+"let g:ale_floating_preview = 1
+
+let g:ale_linters = {
+\   'c++': ['clang'],
+\   'c': ['clang'],
+\   'python': ['pylint'],
+\}
+
+nmap <leader>sp <Plug>(ale_previous_wrap)
+nmap <leader>sn <Plug>(ale_next_wrap)
+
+"}}}
