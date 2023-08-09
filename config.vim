@@ -53,6 +53,10 @@ if has('unix')
     endif
 endif
 
+if has('unix') && exists("g:neovide")
+    set guifont=WenQuanYi\ Micro\ Hei\ Mono:h12
+endif
+
 " some windows shortcut support, such as ctrc a, ctrl c ...
 " encoding
 if has('win32') || has('win64')
