@@ -324,6 +324,8 @@ let g:Lf_PreviewInPopup = 1
 "let g:Lf_CacheDirectory = s:cachedir
 let g:Lf_ShowHidden = 1  "show hidden files
 
+nmap <unique> <leader>frb <Plug>LeaderfRgCwordLiteralBoundary
+
 " preview or not
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
