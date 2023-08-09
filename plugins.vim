@@ -15,6 +15,7 @@ endif
 " programming {{{
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 "Plug 'ludovicchabant/vim-gutentags'
+Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -77,7 +78,7 @@ Plug 'devjoe/vim-codequery'
 "}}}
 
 " perl regular expression {{{
-Plug 'othree/eregex.vim'
+"Plug 'othree/eregex.vim'
 "}}}
 
 "color scheme {{{
