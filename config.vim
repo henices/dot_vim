@@ -54,7 +54,7 @@ if has('unix')
 endif
 
 if has('unix') && exists("g:neovide")
-    set guifont=WenQuanYi\ Micro\ Hei\ Mono:h12
+    set guifont=Source\ Han\ Mono:h12
 endif
 
 " some windows shortcut support, such as ctrc a, ctrl c ...
