@@ -322,7 +322,9 @@ let g:Lf_WindowPosition = 'popup'
 let g:Lf_UseCache = 0
 let g:Lf_PreviewInPopup = 1
 "let g:Lf_CacheDirectory = s:cachedir
+let g:Lf_PopupPreviewPosition='top'
 let g:Lf_ShowHidden = 1  "show hidden files
+let g:Lf_PopupWidth = 0.75
 
 nmap <unique> <leader>frb <Plug>LeaderfRgCwordLiteralBoundary
 
