@@ -393,6 +393,11 @@ let g:ale_linters = {
 \   'python': ['pylint'],
 \}
 
+let g:ale_fixers = {
+\   'c': ['clang-format'],
+\   'cpp': ['clang-format']
+\}
+
 nmap <leader>sp <Plug>(ale_previous_wrap)
 nmap <leader>sn <Plug>(ale_next_wrap)
 
