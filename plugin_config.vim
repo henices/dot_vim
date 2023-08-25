@@ -326,6 +326,11 @@ let g:Lf_PopupPreviewPosition='top'
 let g:Lf_ShowHidden = 1  "show hidden files
 let g:Lf_PopupWidth = 0.75
 
+let g:Lf_WildIgnore = {
+\ 'dir': ['.svn','.git','.hg'],
+\ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+\}
+
 nmap <unique> <leader>frb <Plug>LeaderfRgCwordLiteralBoundary
 
 " preview or not
