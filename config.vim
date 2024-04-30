@@ -53,9 +53,6 @@ if has('unix')
     endif
 endif
 
-if has('unix') && exists("g:neovide")
-    set guifont=Source\ Han\ Mono:h12
-endif
 
 " some windows shortcut support, such as ctrc a, ctrl c ...
 " encoding
@@ -116,7 +113,13 @@ set t_Co=256
 "colors molokai
 "colors gruvbox
 "colors solarized
-colors nord
+"colors nord
+if has('nvim')
+    colors onedark
+else
+    colors nord
+endif
+
 
 " syntax color
 syntax enable

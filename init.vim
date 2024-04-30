@@ -1,8 +1,9 @@
 " by henices
 
 if exists("g:neovide")
-" Put anything you want to happen only in Neovide here
-let g:neovide_cursor_animation_length = 0
+    " Put anything you want to happen only in Neovide here
+    let g:neovide_cursor_animation_length = 0
+    set guifont=Source\ Han\ Mono:h12
 endif
 
 source ~/.vim/plugins.vim
