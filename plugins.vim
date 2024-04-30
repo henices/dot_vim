@@ -21,7 +21,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'wesleyche/Trinity'
 "Plug 'wesleyche/SrcExpl'
-"Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 if has('unix') && system('uname') !~ "Darwin"
     Plug 'lilydjwg/fcitx.vim' , { 'branch': 'fcitx5' }
 endif
@@ -99,6 +99,7 @@ Plug 'rainux/vim-desert-warm-256'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'nordtheme/vim'
+Plug 'olimorris/onedarkpro.nvim'
 "}}}
 
 " syntax {{{
