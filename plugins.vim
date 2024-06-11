@@ -99,7 +99,7 @@ Plug 'rainux/vim-desert-warm-256'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'nordtheme/vim'
-Plug 'olimorris/onedarkpro.nvim'
+Plug 'joshdick/onedark.vim'
 "}}}
 
 " syntax {{{
