@@ -47,8 +47,9 @@ endif
 
 if has('unix')
     if system('uname') =~ 'Darwin'
-        set guifont=menlo:h14
-    else
+        set guifont=Fira\ Code\ Retina:h12
+    endif
+    if !exists("g:neovide")
         set guifont=Fira\ Code\ Retina:h12
     endif
 endif
@@ -100,6 +101,16 @@ set list listchars=tab:>-,trail:.,extends:>
 
 set showbreak=..
 
+if has("termguicolors")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+if has("nvim")
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 "set color
 set background=dark
 set t_Co=256
@@ -115,6 +126,7 @@ set t_Co=256
 "colors solarized
 "colors nord
 if has('nvim')
+    g:onedark_termcolors=256
     colors onedark
 else
     colors nord
