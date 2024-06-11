@@ -333,13 +333,15 @@ let g:Lf_WildIgnore = {
 
 nmap <unique> <leader>frb <Plug>LeaderfRgCwordLiteralBoundary
 
+"let g:Lf_ShortcutF = '<c-p>'
+
 " preview or not
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
 noremap <leader>fs :LeaderfSelf<cr>
 noremap <leader>fm :LeaderfMru<cr>
 noremap <leader>ff :LeaderfFunction<cr>
-noremap <leader>fb :LeaderfBuffer<cr>
+"noremap <leader>fb :LeaderfBuffer<cr>
 noremap <leader>ft :LeaderfBufTag<cr>
 noremap <leader>fl :LeaderfLine<cr>
 noremap <leader>fw :LeaderfWindow<cr>
