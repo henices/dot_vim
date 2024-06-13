@@ -362,6 +362,7 @@ if has('unix')
     endif
 endif
 
+let g:Lf_GtagsSource = 2
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_GtagsAutoUpdate = 1
 let g:Lf_Gtagslabel = 'native-pygments'
