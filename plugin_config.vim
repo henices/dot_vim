@@ -325,6 +325,7 @@ let g:Lf_PreviewInPopup = 1
 let g:Lf_PopupPreviewPosition='top'
 let g:Lf_ShowHidden = 1  "show hidden files
 let g:Lf_PopupWidth = 0.75
+let g:Lf_PythonVersion = 3
 
 let g:Lf_WildIgnore = {
 \ 'dir': ['.svn','.git','.hg'],
@@ -348,19 +349,29 @@ noremap <leader>fw :LeaderfWindow<cr>
 
 let $GTAGSLABEL='native-pygments'
 
-if has('unix')
-    if system('uname') =~ 'Darwin'
-        let $GTAGSCONF='/usr/local/share/gtags/gtags.conf'
-        let g:Lf_Global = '/usr/local/bin/global'
-        let g:Lf_Gtags = '/usr/local/bin/gtags'
-        let g:Lf_Gtagsconf = '/usr/local/share/gtags/gtags.conf'
-    else
-        let $GTAGSCONF='/etc/gtags.conf'
-        let g:Lf_Global = '/usr/bin/global'
-        let g:Lf_Gtags = '/usr/bin/gtags'
-        let g:Lf_Gtagsconf = '/etc/gtags.conf'
+let global_paths = ['/usr/local/bin/global', '/usr/bin/global']
+let gtags_paths = ['/usr/local/bin/gtags', '/usr/bin/gtags']
+
+for global_path in global_paths
+    if !empty(glob(global_path))
+        let g:Lf_Global = global_path
     endif
-endif
+endfor
+
+for gtags_path in gtags_paths
+    if !empty(glob(gtags_path))
+        let g:Lf_Gtags = gtags_path
+    endif
+endfor
+
+let gtags_confs = ['/etc/gtags.conf', '/etc/gtags/gtags.conf', '/usr/local/share/gtags/gtags.conf']
+
+for gtags_conf in gtags_confs
+    if !empty(glob(gtags_conf))
+        let $GTAGSCONF= gtags_conf
+        let g:Lf_Gtagsconf = gtags_conf
+    endif
+endfor
 
 let g:Lf_GtagsSource = 2
 let g:Lf_GtagsAutoGenerate = 1
