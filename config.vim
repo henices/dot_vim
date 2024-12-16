@@ -125,8 +125,13 @@ set t_Co=256
 "colors gruvbox
 "colors solarized
 "colors nord
-let g:onedark_termcolors=256
-colors onedark
+if has("nvim")
+    let g:onedark_termcolors=256
+    colors onedark
+else
+    colors nord
+endif
+
 
 " syntax color
 syntax enable
