@@ -48,7 +48,6 @@ Plug 'tpope/vim-commentary'
 "}}}
 
 " utils {{{
-Plug 'farseer90718/unite-workflow'
 Plug 'mattn/webapi-vim'
 "Plug 'shime/vim-livedown'
 "Plug 'suan/vim-instant-markdown'
@@ -56,7 +55,6 @@ Plug 'mattn/webapi-vim'
 "Plug 'mhinz/vim-hugefile'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'mopp/unite-rss'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim'
 "}}}
@@ -82,6 +80,7 @@ Plug 'devjoe/vim-codequery'
 "}}}
 
 "color scheme {{{
+Plug 'yorumicolors/yorumi.nvim'
 Plug 'vim-scripts/peaksea'
 Plug 'vim-scripts/desert256.vim'
 Plug 'vim-scripts/tir_black'
@@ -99,7 +98,8 @@ Plug 'rainux/vim-desert-warm-256'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'nordtheme/vim'
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
+Plug 'https://github.com/navarasu/onedark.nvim'
 "}}}
 
 " syntax {{{
