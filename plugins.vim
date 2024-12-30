@@ -45,6 +45,9 @@ Plug 'vim-scripts/SyntaxRange'
 "Plug 'nvie/vim-flake8'
 "Plug 'tell-k/vim-autopep8'
 Plug 'tpope/vim-commentary'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'NeogitOrg/neogit'
 "}}}
 
 " utils {{{
