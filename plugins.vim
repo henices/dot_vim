@@ -103,6 +103,8 @@ Plug 'morhetz/gruvbox'
 Plug 'nordtheme/vim'
 "Plug 'joshdick/onedark.vim'
 Plug 'https://github.com/navarasu/onedark.nvim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'cocopon/iceberg.vim'
 "}}}
 
 " syntax {{{
