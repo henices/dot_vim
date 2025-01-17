@@ -67,16 +67,20 @@ command! Md2t call Md2Txt()
 " {{{ Md2Html
 function! Md2Html()
     let tempbuf_in = tempname()
-    let tempbuf_out = tempname()
-
     w `=tempbuf_in`
 
-    call job_start("/usr/bin/pandoc -s -f gfm -t html " .
-        \ tempbuf_in, {'out_io': 'buffer', 'out_name': tempbuf_out})
+    if has("nvim")
+        call jobstart(['/usr/bin/pandoc', '-s', '-f', 'gfm', '-t', 'html', tempbuf_in], {
+            \ "on_stdout": function('W2buf')})
+    else
+        let tempbuf_out = tempname()
+        call job_start("/usr/bin/pandoc -s -f gfm -t html " .
+            \ tempbuf_in, {'out_io': 'buffer', 'out_name': tempbuf_out})
 
-    new `=tempbuf_out`
+        new `=tempbuf_out`
+        1delete
+    endif
 
-    1delete
 endfunction
 
 command! Md2h call Md2Html()
