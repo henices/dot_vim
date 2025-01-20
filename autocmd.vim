@@ -86,18 +86,23 @@ endfunction
 
 "{{{ Dn2Html
 function! Dn2Html()
-    exec 'syntax enable'
-    exec 'syntax on'
-    exec 'set bg=light'
-    exec 'colorscheme PaperColor'
-    exec 'TOhtml'
-    exec 'buffer 2'
-    exec '%s/.*font-family.*/* {font-family: "Droid Sans","Noto Sans","Helvetica Now Text","Helvetica Neue","Roboto","Helvetica","PingFang SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif; font-size: 16px;}/g'
-    exec '%s/<span class="Constant">@\([0-9]\+\)<\/span>/<span class="Constant" id="\1">@\1<\/span>/g'
-    exec '%s/<span class="String"> #@\([0-9]\+\)<\/span>/<span class="String"><a href="#\1" class="String">#@\1<\/a><\/span>/g'
-    exec '8s/$/\rpre {word-wrap:break-word; white-space: pre-wrap; margin-left:.5em; margin-right: .5em}/g'
-    exec 'w! dailynotes.html'
-    exec 'qa!'
+    syntax enable
+    syntax on
+    set bg=light
+    colorscheme PaperColor
+    TOhtml
+    buffer 2
+    %s/.*<title>.*/<title>Daily Notes<\/title>/g
+    %s/.*font-family.*/
+        \* {font-family: "Droid Sans","Noto Sans","Helvetica Now Text","Helvetica Neue","Roboto",
+        \"Helvetica","PingFang SC","Noto Sans SC","Source Han Sans SC",
+        \"Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif; font-size: 16px;}/g
+    %s/<span class="Constant">@\([0-9]\+\)<\/span>/<span class="Constant" id="\1">@\1<\/span>/g
+    %s/<span class="String"> #@\([0-9]\+\)<\/span>/
+        \<span class="String"><a href="#\1" class="String">#@\1<\/a><\/span>/g
+    8s/$/\rpre {word-wrap:break-word; white-space: pre-wrap; margin-left:.5em; margin-right: .5em}/g
+    w! dailynotes.html
+    qa!
 endfunction
 " }}}
 
