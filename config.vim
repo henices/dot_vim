@@ -82,7 +82,7 @@ if has('gui_running')
   set lines=200 columns=200
 endif
 
-"set mouse=a
+set mouse=
 
 " for better coding style, 80 columns
 if exists('+colorcolumn')
