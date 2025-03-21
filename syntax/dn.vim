@@ -7,7 +7,7 @@ syntax clear
 
 syn match call "CALL.*"
 syn match string  " #@[0-9]\+"
-syn match lineno "\[.*\]"
+"syn match lineno "\[.*\]"
 syn match comment "/\*.*\*/"
 syn match identifier "\v[0-9]+\-[0-9]+\-[0-9]+"
 "syn match expression ""
