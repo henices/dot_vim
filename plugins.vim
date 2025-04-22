@@ -105,6 +105,7 @@ Plug 'nordtheme/vim'
 Plug 'https://github.com/navarasu/onedark.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 "}}}
 
 " syntax {{{

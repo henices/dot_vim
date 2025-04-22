@@ -37,7 +37,11 @@ set foldmethod=marker
 
 "encoding
 set encoding=utf-8
-set termencoding=utf-8
+
+if ! has('nvim')
+    set termencoding=utf-8
+endif
+
 set fileencoding=utf-8
 set fileencodings=utf-8,cp936
 
