@@ -101,8 +101,11 @@ Plug 'rainux/vim-desert-warm-256'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'nordtheme/vim'
-"Plug 'joshdick/onedark.vim'
-Plug 'https://github.com/navarasu/onedark.nvim'
+if has('nvim')
+    Plug 'navarasu/onedark.nvim'
+else
+    Plug 'joshdick/onedark.vim'
+endif
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }

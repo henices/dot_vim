@@ -131,15 +131,14 @@ set t_Co=256
 "colors nord
 if has("nvim")
     let g:onedark_termcolors=256
-    colors onedark
-else
-    colors nord
 endif
 
 
 " syntax color
 syntax enable
 syntax on
+
+colors onedark
 
 " ignore some file
 set wildignore+=*.swp,*.so,*.exe
