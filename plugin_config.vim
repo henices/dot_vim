@@ -263,10 +263,6 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:markdown_fenced_languages = ['diff=diff', 'html=html', 'java=java', 'bash=sh', 'viml=vim', 'python=python', 'xml=xml', 'perl=perl', 'c=c', 'cpp=cpp', 'asm=asm', 'make=make']
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_level = 2
-let g:vim_markdown_toc_autofit = 1
-let g:vim_markdown_conceal = 1
-
-set conceallevel=2
 
 "}}}
 
@@ -346,7 +342,7 @@ let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 noremap <leader>fs :LeaderfSelf<cr>
 noremap <leader>fm :LeaderfMru<cr>
 noremap <leader>ff :LeaderfFunction<cr>
-"noremap <leader>fb :LeaderfBuffer<cr>
+noremap <leader>fb :LeaderfBuffer<cr>
 noremap <leader>ft :LeaderfBufTag<cr>
 noremap <leader>fl :LeaderfLine<cr>
 noremap <leader>fw :LeaderfWindow<cr>
@@ -411,6 +407,8 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_virtualtext_cursor=0
+let g:ale_python_pylint_executable = "pylint"
+let g:ale_python_pylint_options = "--rcfile ~/.pylintrc"
 "let g:ale_floating_preview = 1
 
 let g:ale_linters = {
@@ -427,8 +425,4 @@ let g:ale_fixers = {
 nmap <leader>sp <Plug>(ale_previous_wrap)
 nmap <leader>sn <Plug>(ale_next_wrap)
 
-"}}}
-
-"{{{ solarized
-let g:solarized_termcolors=256
 "}}}
